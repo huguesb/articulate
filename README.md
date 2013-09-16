@@ -43,6 +43,7 @@ Usage
 -----
 
 Articulate is based on three core concepts:
+
 * A "section" is a part of a longer article that can occupy its own page. Each
   section has its own source file, which may be in any format supported by Jekyll.
 * A "special page" is a generated page that does not correspond to a single
@@ -96,6 +97,7 @@ The `index.html` and `full.html` pages being respectively generated from the
 
 The YAML frontmatter of an article section differs slightly from that of a
 regular page:
+
 * the section title MUST be specified in the `name` variable
 * the `title` variable is ignored: the `page.title` variable in Liquid
   is derived from the article and section titles
@@ -135,6 +137,7 @@ pages (i.e. articles sections and special pages):
 
 
 Articulate honors the following _config.yml options:
+
 * `articles`: path in which to look for input articles
   default: ./_articles
 * `articles_dest`: path in which to write the generated pages

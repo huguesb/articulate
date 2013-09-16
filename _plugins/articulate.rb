@@ -88,14 +88,15 @@ module Jekyll
     #
     # Sections are ordered within the article by the alphabetical order of the
     # source files, hence the use of numerical prefixes in the example above.
-    # Each section is assigned a Liquid-accessible numerical index (0-based).
+    # Each section is assigned a numerical index (0-based), Liquid-accessible as
+    # 'page.index'.
     #
     #
     # The following variable structure is Liquid-accessible in all article-aware
     # pages (i.e. articles sections and special pages):
     #
     # article:
-    #     tile: Foobar
+    #     title: Foobar
     #     # any other value specified in _article.yml
     #     special:
     #          full:

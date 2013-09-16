@@ -4,6 +4,8 @@ Articulate
 Articulate is a simple [Jekyll](http://jekyllrb.com) plugin that aims to make
 long-form articles first-class citizens.
 
+Canonical repository: <http://gitorious.org/articulate>
+
 
 License
 -------
@@ -101,7 +103,7 @@ regular page:
 * the section title MUST be specified in the `name` variable
 * the `title` variable is ignored: the `page.title` variable in Liquid
   is derived from the article and section titles
-* the `layout` variable is ignored: 'article_section' is used to generate
+* the `layout` variable is ignored: `article_section` is used to generate
   single-section pages.
 
 
@@ -139,7 +141,9 @@ pages (i.e. articles sections and special pages):
 Articulate honors the following _config.yml options:
 
 * `articles`: path in which to look for input articles
-  default: ./_articles
+
+  default: `./_articles`
 * `articles_dest`: path in which to write the generated pages
-  default: ./articles
+
+  default: `./articles`
 

@@ -149,7 +149,7 @@ module Jekyll
             @name = name
             @src_dir = File.join(src, name)
             @dst_dir = File.join(dst, name)
-            @liquid = YAML.safe_load_file(File.join(@src_dir, '_article.yml'))
+            @liquid = YAML.safe_load_file(File.join(site.source, @src_dir, '_article.yml'))
         end
 
         def generate()
@@ -191,6 +191,12 @@ module Jekyll
         def render(layouts, site_payload)
             super(layouts, site_payload.deep_merge({
                 'article' => @article.to_liquid
+            }))
+        end
+
+        def render_liquid(content, payload, info)
+            super(content, payload, info.deep_merge({
+                registers: { article: payload['article'] }
             }))
         end
     end
